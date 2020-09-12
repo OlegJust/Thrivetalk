@@ -1,0 +1,512 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import "stylesheet.scss";
+
+div{
+	//border: 1px solid red;
+}
+header{
+
+	overflow :hidden ;
+	position: relative;
+	padding: 0 10%;
+
+	height: 100vmin;
+	background-color: #F4F9E2;
+	display: flex;
+}
+.back {
+	position: absolute;
+	z-index: 1;
+	width: 807.71px;
+	height: 544.93px;
+	background: #EDFDFF;
+	border-radius: 312.159px;
+	transform: matrix(-0.6, 1, 1, 0.6, 800, 80);
+}
+.front {
+	width: 807.71px;
+	height: 544.93px;
+
+	border-radius: 312.159px;
+	transform: matrix(-0.87, 0.5, 0.5, 0.87, 50, 50);
+	background-color: #edfdff;
+	overflow :hidden ;
+}
+.img{
+	img{
+		width: 110%;
+		transform: rotate(30deg);
+		position :relative;
+		top: -140px;
+		left: -50px;
+		}
+	
+}
+.mune{
+	position: absolute;
+	z-index: 2;
+	top: 27px;
+	left: 0;
+	width: 100%;
+	padding: 0 10%;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	height: 50px;
+	button{
+		background: #62D0DF;
+		border-radius: 50px;
+		font-family: Larsseit;
+		font-size: 14px;
+		line-height: 16px;
+		color: #FFFFFF;
+		padding: 20px 30px;
+	}
+	ul{
+		display: flex;
+		li{
+			display: block;
+			// border-bottom: 1px solid #000;
+			padding: 0 5%;
+			margin: 0 5%;
+			a{
+				font-family: Larsseit;
+				font-size: 14px;
+				line-height: 16px;
+				color: #22356F;
+			}
+		}
+	}
+	&__logo{
+		letter-spacing: -0.035em;
+
+		color: #62D0DF;
+		font-family: Larsseit;
+		font-size: 24px;
+		line-height: 27px;
+	}
+}
+
+.title {
+	width: 484px;
+	margin-top: 20%;
+	&__logo{
+		font-family: Larsseit;
+		font-size: 24px; 
+		line-height: 27px;
+		letter-spacing: -0.035em;
+		color: #62D0DF;
+		margin-bottom: 40px;
+	}
+	h1{
+		font-family: Larsseit;
+		font-size: 48px;
+		line-height: 53px;
+		letter-spacing: -0.035em;
+		margin: 40px 0;
+		color: #22356F;
+	}
+	p{
+		font-family: Larsseit;
+		font-size: 24px;
+		line-height: 42px;
+		margin-bottom: 60px;
+		color: #22356F;
+	}
+	&__button {
+		&_active{
+			padding: 10px 30px;
+			background: #F9B640;
+
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 23px;
+			letter-spacing: 0.1em;
+			color: #FFFFFF;
+			margin-right: 40px ;
+		}
+		&_passive{
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 23px; 
+			letter-spacing: 0.1em;
+			color: #FAB63E;
+
+		}
+	}
+}
+.introduction {
+	display: flex;
+	&__text {
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
+		width: 70%;
+		padding: 10em 13em 5em 13em;
+		background: #62D0DF;
+		h2{
+			font-family: Larsseit;
+
+			font-size: 36px;
+			line-height: 27px;
+			letter-spacing: -0.006em;
+			color: #FFFFFF;
+			margin-bottom: 75px;
+
+		}
+		p{
+			font-family: Larsseit;
+			max-width: 555px;
+			font-size: 24px;
+			font-weight:200 ;
+			line-height: 35px;
+
+			color: #FFFFFF;
+			span{
+				font-weight:400 ;
+			}
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__img1 {
+		width: 30%;
+	}
+}
+
+.aboutus {
+	display: flex;
+	justify-content:space-between;
+	margin: 150px 106px 0 ;
+	h3{
+		font-family: Larsseit;
+		font-size: 16px;
+		line-height: 23px;
+		letter-spacing: 0.06em;
+		color: #22356F;
+	}
+	&__text {
+		max-width: 592px;
+		p{
+			font-family: Larsseit;
+			font-size: 24px;
+			line-height: 34px;
+			letter-spacing: 0.005em;
+			color: #22356F;
+
+			margin-bottom: 75px;
+		}
+		a{
+			display: block;
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+			letter-spacing: 0.06em;
+
+			color: rgba(34, 53, 111, 0.5);
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@mixin fontz($f){
+	display: block;
+	padding: 70px 50px 50px;
+	background-color:$f;
+	width: 100%;
+
+}
+
+.Group3 {
+	margin-bottom: 120px;
+	display: flex;
+	width: 100%;
+	height: 360px;
+
+	&__Group1 {
+		@include fontz(#FFE2DE);
+		&_text {
+			display: block;
+			width: 100%;
+			border-top: 1px solid #fff;
+			padding: 20px;
+
+			font-family: Larsseit;
+			font-size: 32px;
+			line-height: 34px;
+			letter-spacing: -0.006em;
+			color: #FFFFFF;
+
+			background: url('../img/Ellipse.svg') 0 1em no-repeat;
+		}
+	}
+	&__Group2 {
+		@include fontz(#C4E769);
+	}
+	&__Group3 {
+		@include fontz( #62D0DF);
+	}
+	&__Group4 {
+		@include fontz(#0052C1);
+	}
+}
+
+
+@mixin BlockC($f){
+	padding: 95px 70px 70px;
+	background-color: $f;
+	width: 100%;
+	height: 480px;
+}
+
+.block1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	&__element1 {
+		@include BlockC(#22356F); 
+		&_content {
+			display: block;
+			width: 100%;
+			border-top: 1px solid #fff;
+			padding: 20px;
+
+			font-family: Larsseit;
+			font-size: 32px;
+			line-height: 34px;
+			letter-spacing: -0.006em;
+			color: #FFFFFF;
+
+			background: url('../img/Ellipse.svg') 0 1em no-repeat;
+
+			p{
+				width: 10px;
+			}
+		}
+	}
+	&__element2 {
+		@include BlockC(#0052C1);
+	}
+	&__element3 {
+		@include BlockC(#cde5e9);
+	}
+	&__element4 {
+		@include BlockC(#62D0DF);
+	}
+	&__element5 {
+		@include BlockC(#DEE1FF);
+	}
+	&__element6 {
+		@include BlockC(#8F00FF);
+	}
+}
+
+
+@mixin BlockC1(){
+	padding: 55px 77px 37px 105px;
+	h4{
+		font-family: Larsseit;
+		font-size: 28px;
+		line-height: 33px;
+		letter-spacing: -0.03em;
+		color: #22356F;
+		margin-bottom: 28px;
+	}
+	p{
+		font-family: Larsseit;
+		font-size: 16px;
+		line-height: 25px;
+		letter-spacing: -0.03em;
+
+		color: rgba(34, 53, 111, 0.5);
+	}
+}
+
+.block2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	&__element1 {@include BlockC1();}
+	&__element2 {@include BlockC1();}
+	&__element3 {@include BlockC1();}
+	&__element4 {@include BlockC1();}
+	&__element5 {@include BlockC1();}
+	&__element6 {@include BlockC1();}
+}
+
+.block3 {
+	display: flex;
+	&__img {
+		width: 30%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		width: 70%;
+		padding: 103px 175px 42px 106px;
+		display: flex;
+		flex-direction:column;
+		justify-content:space-between;
+
+
+		p{
+			max-width: 676px;
+			font-family: Larsseit;
+			font-size: 36px;
+			line-height: 53px;
+			letter-spacing: -0.01em;
+			font-weight:700;
+
+			color: #22356F;
+		}
+		
+		h5{
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 12px;
+			letter-spacing: 0.06em;
+
+			color: #22356F;
+
+		}
+		&_logo {
+			color: #62D0DF;
+		}
+		&_Help {
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 23px;
+			font-weight:500;
+			letter-spacing: 0.1em;
+
+			color: #FAB63E;
+		}
+	}
+}
+
+
+
+
+
+.block4 {
+	display: flex;
+	&__content {
+		width: 70%;
+		padding: 86px 201px 59px 180px;
+		background-color:#22356F;
+		h5{
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 12px;
+			letter-spacing: 0.06em;
+			margin-bottom: 247px;
+
+			color: #FFFFFF;
+		}
+		h2{
+			font-family: Larsseit;
+			font-size: 64px;
+			line-height: 94px;
+			letter-spacing: -0.01em;
+			margin-bottom: 75px;
+
+			color: #FFFFFF;
+		}
+		p{
+			font-family: Larsseit;
+			font-size: 36px;
+			line-height: 53px;
+			letter-spacing: -0.005em;
+			margin-bottom: 75px;
+
+			color: #FFFFFF;
+
+		}
+		a{
+			font-family: Larsseit;
+			font-size: 16px;
+			line-height: 23px;
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.1em;
+
+			color: #62D0DF;
+
+		}
+	}
+	&__img {
+		width: 30%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+
+
+.top {
+	display: flex;
+	&__img {
+		width: 30%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		width: 70%;
+		display: flex;
+		justify-content:space-around;
+		padding: 98px 70px 74px 0;
+		&_block {
+			max-width: 186px;
+			h5{
+				font-family: Larsseit;
+				font-size: 14px;
+				line-height: 11px;
+				letter-spacing: -0.006em;
+				margin-bottom: 40px;
+
+				color: #22356F;
+			}
+			p{
+				font-family: Larsseit;
+				font-size: 14px;
+				line-height: 23px;
+				letter-spacing: 0.01em;
+				a{
+					color: #006dff;
+				}
+				color: rgba(34, 53, 111, 0.5);
+			}
+		}
+	}
+}
+
+.bottom{
+	background-color:#62D0DF;
+	height: 80px;
+	display: flex;
+	align-items:center;
+	padding-left: 190px;
+	h6{
+		font-family: Larsseit;
+		font-size: 14px;
+		line-height: 11px;
+		letter-spacing: -0.006em;
+
+		color: #FFFFFF;
+
+	}
+}

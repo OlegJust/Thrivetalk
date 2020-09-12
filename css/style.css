@@ -1,0 +1,718 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-MediumItalic.eot");
+  src: local("Larsseit Medium Italic"), local("Larsseit-MediumItalic"), url("../fonts/Larsseit-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-MediumItalic.woff2") format("woff2"), url("../fonts/Larsseit-MediumItalic.woff") format("woff"), url("../fonts/Larsseit-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-Thin.eot");
+  src: local("Larsseit Thin"), local("Larsseit-Thin"), url("../fonts/Larsseit-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-Thin.woff2") format("woff2"), url("../fonts/Larsseit-Thin.woff") format("woff"), url("../fonts/Larsseit-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-LightItalic.eot");
+  src: local("Larsseit Light Italic"), local("Larsseit-LightItalic"), url("../fonts/Larsseit-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-LightItalic.woff2") format("woff2"), url("../fonts/Larsseit-LightItalic.woff") format("woff"), url("../fonts/Larsseit-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit.eot");
+  src: local("Larsseit"), url("../fonts/Larsseit.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit.woff2") format("woff2"), url("../fonts/Larsseit.woff") format("woff"), url("../fonts/Larsseit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-ExtraBold.eot");
+  src: local("Larsseit ExtraBold"), local("Larsseit-ExtraBold"), url("../fonts/Larsseit-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-ExtraBold.woff2") format("woff2"), url("../fonts/Larsseit-ExtraBold.woff") format("woff"), url("../fonts/Larsseit-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-BoldItalic.eot");
+  src: local("Larsseit Bold Italic"), local("Larsseit-BoldItalic"), url("../fonts/Larsseit-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-BoldItalic.woff2") format("woff2"), url("../fonts/Larsseit-BoldItalic.woff") format("woff"), url("../fonts/Larsseit-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-Light.eot");
+  src: local("Larsseit Light"), local("Larsseit-Light"), url("../fonts/Larsseit-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-Light.woff2") format("woff2"), url("../fonts/Larsseit-Light.woff") format("woff"), url("../fonts/Larsseit-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-Bold.eot");
+  src: local("Larsseit Bold"), local("Larsseit-Bold"), url("../fonts/Larsseit-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-Bold.woff2") format("woff2"), url("../fonts/Larsseit-Bold.woff") format("woff"), url("../fonts/Larsseit-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-Italic.eot");
+  src: local("Larsseit Italic"), local("Larsseit-Italic"), url("../fonts/Larsseit-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-Italic.woff2") format("woff2"), url("../fonts/Larsseit-Italic.woff") format("woff"), url("../fonts/Larsseit-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-Medium.eot");
+  src: local("Larsseit Medium"), local("Larsseit-Medium"), url("../fonts/Larsseit-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-Medium.woff2") format("woff2"), url("../fonts/Larsseit-Medium.woff") format("woff"), url("../fonts/Larsseit-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-ExtraBoldItalic.eot");
+  src: local("Larsseit ExtraBold Italic"), local("Larsseit-ExtraBoldItalic"), url("../fonts/Larsseit-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Larsseit-ExtraBoldItalic.woff") format("woff"), url("../fonts/Larsseit-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("../fonts/Larsseit-ThinItalic.eot");
+  src: local("Larsseit Thin Italic"), local("Larsseit-ThinItalic"), url("../fonts/Larsseit-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Larsseit-ThinItalic.woff2") format("woff2"), url("../fonts/Larsseit-ThinItalic.woff") format("woff"), url("../fonts/Larsseit-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+header {
+  overflow: hidden;
+  position: relative;
+  padding: 0 10%;
+  height: 100vmin;
+  background-color: #F4F9E2;
+  display: flex;
+}
+
+.back {
+  position: absolute;
+  z-index: 1;
+  width: 807.71px;
+  height: 544.93px;
+  background: #EDFDFF;
+  border-radius: 312.159px;
+  transform: matrix(-0.6, 1, 1, 0.6, 800, 80);
+}
+
+.front {
+  width: 807.71px;
+  height: 544.93px;
+  border-radius: 312.159px;
+  transform: matrix(-0.87, 0.5, 0.5, 0.87, 50, 50);
+  background-color: #edfdff;
+  overflow: hidden;
+}
+
+.img img {
+  width: 110%;
+  transform: rotate(30deg);
+  position: relative;
+  top: -140px;
+  left: -50px;
+}
+
+.mune {
+  position: absolute;
+  z-index: 2;
+  top: 27px;
+  left: 0;
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.mune button {
+  background: #62D0DF;
+  border-radius: 50px;
+  font-family: Larsseit;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 20px 30px;
+}
+.mune ul {
+  display: flex;
+}
+.mune ul li {
+  display: block;
+  padding: 0 5%;
+  margin: 0 5%;
+}
+.mune ul li a {
+  font-family: Larsseit;
+  font-size: 14px;
+  line-height: 16px;
+  color: #22356F;
+}
+.mune__logo {
+  letter-spacing: -0.035em;
+  color: #62D0DF;
+  font-family: Larsseit;
+  font-size: 24px;
+  line-height: 27px;
+}
+
+.title {
+  width: 484px;
+  margin-top: 20%;
+}
+.title__logo {
+  font-family: Larsseit;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: #62D0DF;
+  margin-bottom: 40px;
+}
+.title h1 {
+  font-family: Larsseit;
+  font-size: 48px;
+  line-height: 53px;
+  letter-spacing: -0.035em;
+  margin: 40px 0;
+  color: #22356F;
+}
+.title p {
+  font-family: Larsseit;
+  font-size: 24px;
+  line-height: 42px;
+  margin-bottom: 60px;
+  color: #22356F;
+}
+.title__button_active {
+  padding: 10px 30px;
+  background: #F9B640;
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  margin-right: 40px;
+}
+.title__button_passive {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #FAB63E;
+}
+
+.introduction {
+  display: flex;
+}
+.introduction__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  padding: 10em 13em 5em 13em;
+  background: #62D0DF;
+}
+.introduction__text h2 {
+  font-family: Larsseit;
+  font-size: 36px;
+  line-height: 27px;
+  letter-spacing: -0.006em;
+  color: #FFFFFF;
+  margin-bottom: 75px;
+}
+.introduction__text p {
+  font-family: Larsseit;
+  max-width: 555px;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 35px;
+  color: #FFFFFF;
+}
+.introduction__text p span {
+  font-weight: 400;
+}
+.introduction__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.introduction__img1 {
+  width: 30%;
+}
+
+.aboutus {
+  display: flex;
+  justify-content: space-between;
+  margin: 150px 106px 0;
+}
+.aboutus h3 {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #22356F;
+}
+.aboutus__text {
+  max-width: 592px;
+}
+.aboutus__text p {
+  font-family: Larsseit;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.005em;
+  color: #22356F;
+  margin-bottom: 75px;
+}
+.aboutus__text a {
+  display: block;
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: rgba(34, 53, 111, 0.5);
+  margin-bottom: 24px;
+}
+
+.Group3 {
+  margin-bottom: 120px;
+  display: flex;
+  width: 100%;
+  height: 360px;
+}
+.Group3__Group1 {
+  display: block;
+  padding: 70px 50px 50px;
+  background-color: #FFE2DE;
+  width: 100%;
+}
+.Group3__Group1_text {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #fff;
+  padding: 20px;
+  font-family: Larsseit;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.006em;
+  color: #FFFFFF;
+  background: url("../img/Ellipse.svg") 0 1em no-repeat;
+}
+.Group3__Group2 {
+  display: block;
+  padding: 70px 50px 50px;
+  background-color: #C4E769;
+  width: 100%;
+}
+.Group3__Group3 {
+  display: block;
+  padding: 70px 50px 50px;
+  background-color: #62D0DF;
+  width: 100%;
+}
+.Group3__Group4 {
+  display: block;
+  padding: 70px 50px 50px;
+  background-color: #0052C1;
+  width: 100%;
+}
+
+.block1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.block1__element1 {
+  padding: 95px 70px 70px;
+  background-color: #22356F;
+  width: 100%;
+  height: 480px;
+}
+.block1__element1_content {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #fff;
+  padding: 20px;
+  font-family: Larsseit;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.006em;
+  color: #FFFFFF;
+  background: url("../img/Ellipse.svg") 0 1em no-repeat;
+}
+.block1__element1_content p {
+  width: 10px;
+}
+.block1__element2 {
+  padding: 95px 70px 70px;
+  background-color: #0052C1;
+  width: 100%;
+  height: 480px;
+}
+.block1__element3 {
+  padding: 95px 70px 70px;
+  background-color: #cde5e9;
+  width: 100%;
+  height: 480px;
+}
+.block1__element4 {
+  padding: 95px 70px 70px;
+  background-color: #62D0DF;
+  width: 100%;
+  height: 480px;
+}
+.block1__element5 {
+  padding: 95px 70px 70px;
+  background-color: #DEE1FF;
+  width: 100%;
+  height: 480px;
+}
+.block1__element6 {
+  padding: 95px 70px 70px;
+  background-color: #8F00FF;
+  width: 100%;
+  height: 480px;
+}
+
+.block2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.block2__element1 {
+  padding: 55px 77px 37px 105px;
+}
+.block2__element1 h4 {
+  font-family: Larsseit;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+  margin-bottom: 28px;
+}
+.block2__element1 p {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.block2__element2 {
+  padding: 55px 77px 37px 105px;
+}
+.block2__element2 h4 {
+  font-family: Larsseit;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+  margin-bottom: 28px;
+}
+.block2__element2 p {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.block2__element3 {
+  padding: 55px 77px 37px 105px;
+}
+.block2__element3 h4 {
+  font-family: Larsseit;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+  margin-bottom: 28px;
+}
+.block2__element3 p {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.block2__element4 {
+  padding: 55px 77px 37px 105px;
+}
+.block2__element4 h4 {
+  font-family: Larsseit;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+  margin-bottom: 28px;
+}
+.block2__element4 p {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.block2__element5 {
+  padding: 55px 77px 37px 105px;
+}
+.block2__element5 h4 {
+  font-family: Larsseit;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+  margin-bottom: 28px;
+}
+.block2__element5 p {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.block2__element6 {
+  padding: 55px 77px 37px 105px;
+}
+.block2__element6 h4 {
+  font-family: Larsseit;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+  margin-bottom: 28px;
+}
+.block2__element6 p {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
+}
+
+.block3 {
+  display: flex;
+}
+.block3__img {
+  width: 30%;
+}
+.block3__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.block3__content {
+  width: 70%;
+  padding: 103px 175px 42px 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.block3__content p {
+  max-width: 676px;
+  font-family: Larsseit;
+  font-size: 36px;
+  line-height: 53px;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: #22356F;
+}
+.block3__content h5 {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.06em;
+  color: #22356F;
+}
+.block3__content_logo {
+  color: #62D0DF;
+}
+.block3__content_Help {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #FAB63E;
+}
+
+.block4 {
+  display: flex;
+}
+.block4__content {
+  width: 70%;
+  padding: 86px 201px 59px 180px;
+  background-color: #22356F;
+}
+.block4__content h5 {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.06em;
+  margin-bottom: 247px;
+  color: #FFFFFF;
+}
+.block4__content h2 {
+  font-family: Larsseit;
+  font-size: 64px;
+  line-height: 94px;
+  letter-spacing: -0.01em;
+  margin-bottom: 75px;
+  color: #FFFFFF;
+}
+.block4__content p {
+  font-family: Larsseit;
+  font-size: 36px;
+  line-height: 53px;
+  letter-spacing: -0.005em;
+  margin-bottom: 75px;
+  color: #FFFFFF;
+}
+.block4__content a {
+  font-family: Larsseit;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #62D0DF;
+}
+.block4__img {
+  width: 30%;
+}
+.block4__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top {
+  display: flex;
+}
+.top__img {
+  width: 30%;
+}
+.top__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.top__content {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  padding: 98px 70px 74px 0;
+}
+.top__content_block {
+  max-width: 186px;
+}
+.top__content_block h5 {
+  font-family: Larsseit;
+  font-size: 14px;
+  line-height: 11px;
+  letter-spacing: -0.006em;
+  margin-bottom: 40px;
+  color: #22356F;
+}
+.top__content_block p {
+  font-family: Larsseit;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.top__content_block p a {
+  color: #006dff;
+}
+
+.bottom {
+  background-color: #62D0DF;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 190px;
+}
+.bottom h6 {
+  font-family: Larsseit;
+  font-size: 14px;
+  line-height: 11px;
+  letter-spacing: -0.006em;
+  color: #FFFFFF;
+}
